@@ -9,7 +9,7 @@ export const farms = [
     animals: 'Sauer, småfe og stor utmarksbeite',
     region: 'Innlandet',
     url: 'https://fjellgardenfinstad.no',
-    description: 'Fjellgård med sauer og småfe. Tilbyr oppfølging for barn og unge.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Østre Kjærnes Gård',
@@ -21,7 +21,7 @@ export const farms = [
     animals: 'Alpakkaer, hest og rideskole',
     region: 'Vestfold',
     url: 'https://alpakkagaarden.no',
-    description: 'Kjent som Alpakkegården. Alpakkaer, hest og rideskole. Tilrettelagt for de fleste.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Vestgardn Wien',
@@ -33,7 +33,7 @@ export const farms = [
     animals: 'Kyr og smådyr på tradisjonsrik gård',
     region: 'Innlandet',
     url: 'https://innpatunet.no/vestgarn-wien/',
-    description: 'Tradisjonsrik gård med kyr og smådyr. Fokus på arbeidstrening og mestring.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Småbruket Ringeli',
@@ -45,7 +45,7 @@ export const farms = [
     animals: 'Småskala gårdsdrift med flere dyrearter',
     region: 'Buskerud',
     url: 'https://www.smabruket-ringeli.com/',
-    description: 'Lite og oversiktlig småbruk. Trygg ramme for barn, unge og voksne.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Buggegården',
@@ -57,7 +57,7 @@ export const farms = [
     animals: 'Hest og landbruksaktiviteter',
     region: 'Vestfold',
     url: 'https://www.buggegarden.no/',
-    description: 'Gård med hest og landbruksaktiviteter. Individuell oppfølging i rolig tempo.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Fladmark Gård',
@@ -69,7 +69,7 @@ export const farms = [
     animals: 'Gårdsbarnehage og IPT-tilbud samme sted',
     region: 'Buskerud',
     url: 'https://www.fladmarkgard.no',
-    description: 'Gårdsbarnehage og IPT-tilbud samme sted. Natur, dyr og praktiske gjøremål.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Skårød Gård',
@@ -81,7 +81,7 @@ export const farms = [
     animals: 'Sauføll, hønseproduksjon og skog',
     region: 'Vestfold',
     url: 'https://skaarodgaard.no',
-    description: 'Sauføll, hønseproduksjon og skog. Sesongbaserte aktiviteter gjennom hele året.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Brautertunet',
@@ -93,7 +93,7 @@ export const farms = [
     animals: 'Gårdstun med flere dyrearter',
     region: 'Østfold',
     url: 'https://www.tombrauter.no/brautertunet/',
-    description: 'Gårdstun med flere dyrearter. Tilbyr både dagsopphold og kortere opphold.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Bjugstadhøiden Gård',
@@ -105,7 +105,7 @@ export const farms = [
     animals: 'Fjelsgård med stor utmark',
     region: 'Innlandet',
     url: 'https://inn-pa-tunet.no/finn-gaard/bjugstadhoiden-gard-geir-bratberg/',
-    description: 'Fjelsgård med stor utmark. Friluftsliv, dyrestell og håndverksaktiviteter.',
+    description: 'Beskrivelse kommer.',
   },
   {
     name: 'Søndre Grøset Gård',
@@ -117,7 +117,7 @@ export const farms = [
     animals: 'Hage, dyr og fellesskap',
     region: 'Innlandet',
     url: 'https://sondre-groset-gard.no',
-    description: 'Gård med fokus på hage, dyr og fellesskap. Egnet for dagtilbud og avlastning.',
+    description: 'Beskrivelse kommer.',
   },
 ];
 

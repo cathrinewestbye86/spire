@@ -18,23 +18,23 @@ import { farms } from '../data/content.js';
 
   <section class="section">
     <div class="container">
-      <h2>Kart over medlemsgårdene</h2>
-      <FarmMap />
+      {farms.map((f) => (
+        <div class="farm-row">
+          <div>
+            <h3><a href={`/gardene/${f.slug}`}>{f.name}</a></h3>
+            {f.location && <span class="region">{f.location}</span>
+            }
+          </div>
+          <a href={`/gardene/${f.slug}`} class="more">Les mer →</a>
+        </div>
+      ))}
     </div>
   </section>
 
   <section class="section" style="background: var(--white);">
     <div class="container">
-      {farms.map((f) => (
-        <div class="farm-row">
-          <div>
-            <h3><a href={`/gardene/${f.slug}`}>{f.name}</a></h3>
-            {f.location && <span class="region">{f.location}</span>}
-          </div>
-          <a href={`/gardene/${f.slug}`} class="more">Les mer →</a>
-          <span class="desc">{f.description}</span>
-        </div>
-      ))}
+      <h2>Kart over medlemsgårdene</h2>
+      <FarmMap />
     </div>
   </section>
 </Base>

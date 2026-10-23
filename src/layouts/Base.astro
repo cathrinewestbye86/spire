@@ -5,14 +5,10 @@ const { title, description } = Astro.props;
 const current = Astro.url.pathname;
 
 const nav = [
-  { href: '/hva-er-inn-pa-tunet', label: 'Hva er Inn på tunet' },
-  { href: '/hvorfor-gardsbaserte-tjenester', label: 'Hvorfor gårdsbaserte tjenester' },
-  { href: '/tjenester', label: 'Tjenester' },
+  { href: '/hva-er-inn-pa-tunet', label: 'Inn på tunet' },
   { href: '/gardene', label: 'Gårdene' },
-  { href: '/for-kommuner', label: 'For kommuner' },
-  { href: '/nyheter', label: 'Nyheter' },
+  { href: '/tjenester', label: 'Tjenester' },
   { href: '/dokumenter', label: 'Dokumenter' },
-  { href: '/om-oss', label: 'Om oss' },
   { href: '/kontakt', label: 'Kontakt' },
 ];
 
@@ -59,12 +55,10 @@ const isActive = (href) => current.startsWith(href);
         <div>
           <h3>Snarveier</h3>
           <ul>
-            <li><a href="/gardene">Finn riktig gård</a></li>
             <li><a href="/for-kommuner">For kommuner og hjelpeetater</a></li>
             <li><a href="/hvorfor-gardsbaserte-tjenester">Forskning på grønn omsorg</a></li>
             <li><a href="/nyheter">Nyheter</a></li>
-            <li><a href="/dokumenter">Dokumenter</a></li>
-            <li><a href="/kontakt">Kontakt oss</a></li>
+            <li><a href="/om-oss">Om oss og styret</a></li>
           </ul>
         </div>
       </div>

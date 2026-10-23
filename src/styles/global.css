@@ -1,12 +1,15 @@
 :root {
-  --green-900: #1e3a2b;
-  --green-700: #2d5a3d;
-  --green-600: #3a6b4a;
-  --green-100: #e8f0ea;
-  --cream: #faf8f4;
+  /* IPT-inspirert palett: frisk vårgrønn + luftig hvitt */
+  --green-900: #1b4332;   /* dyp grønn — kun aksenter (footer, mørk tekst) */
+  --green-700: #2d6a4f;   /* mellomgrønn — knapper, CTA-bånd */
+  --green-600: #40916c;   /* lenker, aktive elementer */
+  --green-500: #52b788;   /* frisk vårgrønn — hero-gradient */
+  --green-300: #95d5b2;   /* lys grønn — ikoner, myke henvelser */
+  --green-100: #d8f3dc;   /* svært lys grønn — bakgrunnsfelt */
+  --cream: #ffffff;       /* ren hvit — luftige flater */
   --white: #ffffff;
-  --text: #24312a;
-  --muted: #5c6b60;
+  --text: #1b4332;
+  --muted: #526b5e;
   --radius: 14px;
   --maxw: 1080px;
 }
@@ -32,11 +35,13 @@ img { max-width: 100%; display: block; }
 
 /* Header */
 .site-header {
-  background: var(--green-900);
-  color: var(--white);
+  background: var(--white);
+  color: var(--text);
   position: sticky;
   top: 0;
   z-index: 10;
+  border-bottom: 3px solid var(--green-500);
+  box-shadow: 0 1px 6px rgba(27, 67, 50, 0.08);
 }
 
 .site-header .container {
@@ -50,7 +55,7 @@ img { max-width: 100%; display: block; }
 }
 
 .brand {
-  color: var(--white);
+  color: var(--green-900);
   text-decoration: none;
   font-weight: 700;
   font-size: 1.15rem;
@@ -64,16 +69,18 @@ img { max-width: 100%; display: block; }
 .nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
 
 .nav a {
-  color: var(--green-100);
+  color: var(--green-700);
   text-decoration: none;
   font-size: 0.95rem;
+  font-weight: 500;
 }
 
-.nav a:hover { color: var(--white); text-decoration: underline; }
+.nav a:hover { color: var(--green-600); text-decoration: underline; }
+.nav a.active { color: var(--green-600); font-weight: 700; }
 
 /* Hero */
 .hero {
-  background: linear-gradient(160deg, var(--green-700), var(--green-900));
+  background: linear-gradient(160deg, var(--green-500), var(--green-700));
   color: var(--white);
   padding: 4rem 0 4.5rem;
 }
@@ -89,7 +96,7 @@ img { max-width: 100%; display: block; }
   font-size: 1.15rem;
   max-width: 55ch;
   margin: 0 0 1.75rem;
-  color: var(--green-100);
+  color: #eafbf0;
 }
 
 .btn {
@@ -100,6 +107,7 @@ img { max-width: 100%; display: block; }
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
+  box-shadow: 0 2px 8px rgba(27, 67, 50, 0.2);
 }
 
 .btn:hover { background: var(--green-100); }
@@ -143,6 +151,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  box-shadow: 0 1px 5px rgba(27, 67, 50, 0.06);
 }
 
 .card h3 { margin: 0; color: var(--green-700); font-size: 1.1rem; }
@@ -170,7 +179,7 @@ img { max-width: 100%; display: block; }
 /* Footer */
 .site-footer {
   background: var(--green-900);
-  color: var(--green-100);
+  color: var(--green-300);
   padding: 2.5rem 0;
   margin-top: 3rem;
 }

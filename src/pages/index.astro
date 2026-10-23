@@ -55,10 +55,10 @@ import { services, farms, news } from '../data/content.js';
       {farms.map((f) => (
         <div class="farm-row">
           <div>
-            <h3>{f.name}</h3>
+            <h3><a href={`/gardene/${f.slug}`}>{f.name}</a></h3>
             <span class="region">{f.region}</span>
           </div>
-          <a href={f.url} target="_blank" rel="noopener">Gårdens side ↗</a>
+          <a href={`/gardene/${f.slug}`} class="more">Les mer →</a>
           <span class="desc">{f.description}</span>
         </div>
       ))}

@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+import { farms, services } from '../../data/content.js';
+
+export function getStaticPaths() {
+  return farms.map((f) => ({ params: { slug: f.slug }, props: { farm: f } }));
+}
+
+const { farm } = Astro.props;
+---
+
+<Base title={farm.name} description={farm.description}>
+  <div class="page-head">
+    <div class="container">
+      <h1>{farm.name}</h1>
+      <p>{farm.region} · Godkjent Inn på tunet-gård</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose">
+      <p>{farm.description}</p>
+
+      <h2>Tilbud</h2>
+      <ul>
+        {farm.services.map((s) => <li>{s}</li>)}
+      </ul>
+
+      {farm.animals && (
+        <>
+          <h2>Dyr og ressurser</h2>
+          <p>{farm.animals}</p>
+        </>
+      )}
+
+      <h2>Kontakt</h2>
+      <p>
+        Gå direkte til
+        <a href={farm.url} target="_blank" rel="noopener">{farm.name}s egen nettside ↗</a>
+        for mer informasjon og kontaktmuligheter.
+      </p>
+
+      <p>
+        <a href="/gardene">← Se alle medlemsgårder</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2 style="color: var(--white); margin: 0 0 0.5rem;">Usikker på om dette er riktig gård?</h2>
+      <p style="margin: 0 0 1rem;">Vi hjelper deg med å finne det tilbudet som passer best.</p>
+      <a href="/kontakt" class="btn">Kontakt Spire</a>
+    </div>
+  </section>
+</Base>

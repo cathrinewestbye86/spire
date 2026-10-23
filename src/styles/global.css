@@ -275,3 +275,7 @@ img { max-width: 100%; display: block; }
 .doc-list a:hover { background: var(--blue-100); color: var(--blue-600); }
 .doc-icon { margin-right: 0.5rem; }
 
+
+/* Farm list links */
+.farm-row h3 a { color: var(--blue-900); text-decoration: none; }
+.farm-row h3 a:hover { color: var(--blue-600); text-decoration: underline; }

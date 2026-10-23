@@ -1,48 +1,24 @@
 ---
 import Base from '../layouts/Base.astro';
 import { services, farms, news } from '../data/content.js';
-import fs from 'node:fs';
-
-const heroImage = fs.existsSync('public/images/hero.svg') ? '/images/hero.svg' : fs.existsSync('public/images/hero.jpg') ? '/images/hero.jpg' : null;
-
-const serviceImages = {
-  'barn-og-unge': '/images/barn.svg',
-  'voksne': '/images/voksne.svg',
-  'omsorg': '/images/omsorg.svg',
-};
 ---
 
 <Base
   title="Trygghet og utvikling gjennom grønn omsorg"
   description="Spire IPT er et samvirke av godkjente Inn på tunet-gårder som tilbyr tilrettelagte tjenester innen læring, arbeid, omsorg og fritid."
 >
-  {heroImage ? (
-    <section class="hero with-image">
-      <img src={heroImage} alt="Illustrasjon av gård med sau og rød låve" class="hero-img" />
-      <div class="hero-caption">
-        <div class="container">
-          <h1>Trygghet og utvikling gjennom grønn omsorg</h1>
-          <p>
-            Spire er et samvirke av godkjente Inn på tunet-gårder — gårdsbaserte tjenester
-            innen læring, arbeid, omsorg og fritid for kommuner og etater.
-          </p>
-        </div>
-      </div>
-    </section>
-  ) : (
-    <section class="hero">
-      <div class="container">
-        <h1>Trygghet og utvikling gjennom grønn omsorg</h1>
-        <p>
-          Spire er et samvirke av godkjente Inn på tunet-gårder. Vi tilbyr kommuner og etater
-          dokumenterte, gårdsbaserte tjenester innen læring, arbeid, omsorg og fritid — med
-          gården, dyrene og naturen som arena.
-        </p>
-        <a href="/gardene" class="btn">Finn riktig gård</a>
-        <a href="/for-kommuner" class="btn btn-outline">For kommuner og etater</a>
-      </div>
-    </section>
-  )}
+  <section class="hero">
+    <div class="container">
+      <h1>Trygghet og utvikling gjennom grønn omsorg</h1>
+      <p>
+        Spire er et samvirke av godkjente Inn på tunet-gårder. Vi tilbyr kommuner og etater
+        dokumenterte, gårdsbaserte tjenester innen læring, arbeid, omsorg og fritid — med
+        gården, dyrene og naturen som arena.
+      </p>
+      <a href="/gardene" class="btn">Finn riktig gård</a>
+      <a href="/for-kommuner" class="btn btn-outline">For kommuner og etater</a>
+    </div>
+  </section>
 
   <section class="section intro">
     <div class="container">
@@ -64,7 +40,6 @@ const serviceImages = {
       <ul class="cards">
         {services.map((s) => (
           <li class="card">
-            <img src={serviceImages[s.slug]} alt="" class="card-img" />
             <h3>{s.title}</h3>
             <p>{s.short}</p>
             <a href={`/tjenester/${s.slug}`} class="more">Les mer →</a>

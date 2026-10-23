@@ -29,7 +29,7 @@ import { services, farms, news } from '../data/content.js';
         og nært tiltak som utfyller egne tjenester.
       </p>
       <p>
-        <a href="/hvorfor-gardsbaserte-tjenester" class="more">Se hva forskningen viser →</a>
+        <a href="/hvorfor-gardsbaserte-tjenester">Se hva forskningen viser →</a>
       </p>
     </div>
   </section>
@@ -42,7 +42,6 @@ import { services, farms, news } from '../data/content.js';
           <li class="card">
             <h3>{s.title}</h3>
             <p>{s.short}</p>
-            <a href={`/tjenester/${s.slug}`} class="more">Les mer →</a>
           </li>
         ))}
       </ul>
@@ -74,7 +73,6 @@ import { services, farms, news } from '../data/content.js';
             <span class="date">{n.date}</span>
             <h3>{n.title}</h3>
             <p>{n.excerpt}</p>
-            <a href={`/nyheter/${n.slug}`} class="more">Les mer →</a>
           </li>
         ))}
       </ul>

@@ -17,11 +17,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install, build
-        uses: withastro/action@v3
-        with:
-          fetch-depth: 0
+        run: |
+          npm install
+          npm run build
       - name: Fix base paths for GitHub Pages
         run: node scripts/fix-base-paths.mjs
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
   deploy:
     needs: build
     runs-on: ubuntu-latest

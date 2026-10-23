@@ -180,7 +180,6 @@ img { max-width: 100%; display: block; }
   background: var(--blue-900);
   color: var(--blue-300);
   padding: 2.5rem 0;
-  margin-top: 3rem;
 }
 
 .site-footer a { color: var(--white); }
@@ -207,6 +206,8 @@ img { max-width: 100%; display: block; }
 /* Content page */
 .prose { max-width: 70ch; }
 .prose h2 { color: var(--blue-900); margin-top: 2rem; }
+.prose { margin-left: auto; margin-right: auto; }
+.section .prose { text-align: left; }
 .prose ul { padding-left: 1.2rem; }
 .prose li { margin-bottom: 0.4rem; }
 

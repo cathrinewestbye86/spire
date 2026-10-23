@@ -18,11 +18,7 @@ import { documents } from '../data/content.js';
           <h2>{group.section}</h2>
           <ul class="doc-list">
             {group.items.map((doc) => (
-              <li>
-                <a href={doc.href}>
-                  <span class="doc-icon">📄</span> {doc.title}
-                </a>
-              </li>
+              <li><span class="doc-icon">📄</span> {doc.title}</li>
             ))}
           </ul>
         </div>

@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { news } from '../../data/content.js';
+---
+
+<Base title="Nyheter" description="Aktuelt fra Spire IPT og medlemsgårdene.">
+  <div class="page-head">
+    <div class="container">
+      <h1>Nyheter og aktuelt</h1>
+      <p>Nytt fra Spire IPT, medlemsgårdene og Nasjonal IPT-satsing.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <ul class="cards">
+        {news.map((n) => (
+          <li class="card">
+            <span class="date">{n.date}</span>
+            <h3>{n.title}</h3>
+            <p>{n.excerpt}</p>
+            <a href={`/nyheter/${n.slug}`} class="more">Les mer →</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { news } from '../../data/content.js';
+
+export function getStaticPaths() {
+  return news.map((n) => ({ params: { slug: n.slug }, props: { item: n } }));
+}
+
+const { item } = Astro.props;
+---
+
+<Base title={item.title} description={item.excerpt}>
+  <div class="page-head">
+    <div class="container">
+      <h1>{item.title}</h1>
+      <p>{item.date}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose">
+      <p>{item.excerpt}</p>
+      <p><a href="/nyheter">← Tilbake til nyheter</a></p>
+    </div>
+  </section>
+</Base>

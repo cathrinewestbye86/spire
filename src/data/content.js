@@ -109,3 +109,60 @@ export const contactPersons = [
   { name: 'Merethe Næsbø', role: 'Styremedlem', email: 'merethe.nesbo@gmail.com', phone: '+47 993 94 436' },
   { name: 'Janne E. M. Lie', role: 'Økonomi, anbud og søknader', email: 'janne@spire-innpaatunet.no', phone: '+47 483 67 431' },
 ];
+
+export const news = [
+  {
+    slug: 'bufdir-stotte',
+    title: 'Gode opplevelser og fellesskap med støtte fra Bufdir',
+    date: '2026-10-02',
+    excerpt:
+      'Med støtte fra Bufdir kan gårder i Spire IPT tilby gratis aktiviteter for barn og unge. Målet er å gi flere mulighet til å delta, oppleve mestring og bli en del av et trygt fellesskap — uavhengig av familiens økonomi.',
+  },
+  {
+    slug: 'ny-strategi-ipt',
+    title: 'Ny nasjonal strategi for Inn på tunet',
+    date: '2026-06-17',
+    excerpt:
+      'Regjeringen har lansert ny nasjonal strategi for Inn på tunet. Satsingen styrker rammevilkårene for gårdsbaserte tjenester og er god nytt for både tilbydere og oppdragsgivere.',
+  },
+  {
+    slug: 'ny-eiergard',
+    title: 'Spire vokser — ny medlemsgård',
+    date: '2026-09-01',
+    excerpt:
+      'Vi er nå 10 godkjente gårder i samvirket. Den nyeste eiergården ble godtatt inn i september, og styrker tilbudet i sin region.',
+  },
+];
+
+export const documents = [
+  {
+    section: 'Styremøteprotokoller',
+    items: [
+      { title: 'Styremøte 2026-05 — 08.09.26', href: '#' },
+      { title: 'Styremøte 2026-04 — 18.06.26', href: '#' },
+      { title: 'Styremøte 2026-03 — 14.04.26', href: '#' },
+      { title: 'Styremøte 2026-02 — 26.02.26', href: '#' },
+      { title: 'Styremøte 2026-01 — 18.02.26', href: '#' },
+      { title: 'Styremøte 2025-12 — 25.11.25', href: '#' },
+      { title: 'Styremøte 2025-10 — 28.07.25', href: '#' },
+      { title: 'Styremøte 2025-09 — 24.06.25', href: '#' },
+      { title: 'Styremøte 2025-08 — 04.06.25', href: '#' },
+    ],
+  },
+  {
+    section: 'Årsmøte 2026',
+    items: [
+      { title: 'Årsregnskap 2025', href: '#' },
+      { title: 'Budsjett 2026', href: '#' },
+      { title: 'Årsberetning 2025', href: '#' },
+      { title: 'Protokoll årsmøte 2026', href: '#' },
+    ],
+  },
+  {
+    section: 'Vedtekter og godkjenninger',
+    items: [
+      { title: 'Vedtekter for Spire IPT', href: '#' },
+      { title: 'Oversikt over medlemsgårdenes IPT-godkjenninger', href: '#' },
+    ],
+  },
+];

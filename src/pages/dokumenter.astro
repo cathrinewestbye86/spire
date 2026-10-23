@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import { documents } from '../data/content.js';
+---
+
+<Base title="Dokumenter" description="Styremøteprotokoller, årsregnskap, budsjett, årsberetning og vedtekter for Spire IPT.">
+  <div class="page-head">
+    <div class="container">
+      <h1>Dokumenter</h1>
+      <p>Protokoller, regnskap og offentlige dokumenter fra Spire IPT.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      {documents.map((group) => (
+        <div class="doc-group">
+          <h2>{group.section}</h2>
+          <ul class="doc-list">
+            {group.items.map((doc) => (
+              <li>
+                <a href={doc.href}>
+                  <span class="doc-icon">📄</span> {doc.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <p class="disclaimer">
+        Dokumentene lastes opp fortløpende. Mangler du noe, ta kontakt med styret —
+        se <a href="/kontakt">kontaktsiden</a>.
+      </p>
+    </div>
+  </section>
+</Base>

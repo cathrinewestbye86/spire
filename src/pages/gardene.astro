@@ -3,15 +3,14 @@ import Base from '../layouts/Base.astro';
 import FarmMap from '../components/FarmMap.astro';
 import { farms } from '../data/content.js';
 
-const regions = [...new Set(farms.map((f) => f.region))];
 ---
 
-<Base title="Gårdene" description="Oversikt over Spire IPT sine godkjente medlemsgårder i Innlandet, Vestfold, Buskerud og Østfold.">
+<Base title="Gårdene" description="Oversikt over Spire IPT sine godkjente medlemsgårder.">
   <div class="page-head">
     <div class="container">
       <h1>Våre medlemsgårder</h1>
       <p>
-        {farms.length} godkjente IPT-gårder i {regions.join(', ')}.
+        {farms.length} godkjente IPT-gårder.
         Gårdene har ulike ressurser og spesialiteter — vi hjelper deg å finne den som passer best.
       </p>
     </div>
@@ -26,19 +25,15 @@ const regions = [...new Set(farms.map((f) => f.region))];
 
   <section class="section" style="background: var(--white);">
     <div class="container">
-      {regions.map((region) => (
-        <>
-          <h2>{region}</h2>
-          {farms.filter((f) => f.region === region).map((f) => (
-            <div class="farm-row">
-              <div>
-                <h3><a href={`/gardene/${f.slug}`}>{f.name}</a></h3>
-              </div>
-              <a href={`/gardene/${f.slug}`} class="more">Les mer →</a>
-              <span class="desc">{f.description}</span>
-            </div>
-          ))}
-        </>
+      {farms.map((f) => (
+        <div class="farm-row">
+          <div>
+            <h3><a href={`/gardene/${f.slug}`}>{f.name}</a></h3>
+            {f.location && <span class="region">{f.location}</span>}
+          </div>
+          <a href={`/gardene/${f.slug}`} class="more">Les mer →</a>
+          <span class="desc">{f.description}</span>
+        </div>
       ))}
     </div>
   </section>

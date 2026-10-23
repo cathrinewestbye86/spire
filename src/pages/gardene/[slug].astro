@@ -13,7 +13,7 @@ const { farm } = Astro.props;
   <div class="page-head">
     <div class="container">
       <h1>{farm.name}</h1>
-      <p>{farm.region} · Godkjent Inn på tunet-gård</p>
+      <p>{farm.location ? farm.location + ' · ' : ''}Godkjent Inn på tunet-gård</p>
     </div>
   </div>
 

@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 :root {
-  /* Blå basepalett — ro, tillit, profesjonalitet (IPT-inspirert) */
-  --blue-900: #0a2e4f;   /* dyp marineblå — footer, mørk tekst */
-  --blue-700: #1d5b8a;   /* knapper, CTA-bånd */
-  --blue-600: #2673a8;   /* lenker, aktive elementer */
-  --blue-500: #3b82c4;   /* frisk blå — hero-gradient */
-  --blue-300: #a8d4ee;   /* lys blå — myke henvelser */
-  --blue-100: #dceef8;   /* svært lys blå — bakgrunnsfelt */
+  /* Blå basepalett — dypere marineblå (Bufdir-inspirert) */
+  --blue-900: #06213a;   /* dyp marineblå — footer, mørk tekst */
+  --blue-700: #134a73;   /* knapper, lenker */
+  --blue-600: #1a5c8e;   /* lenker, aktive elementer */
+  --blue-500: #21689c;   /* hero-gradient */
+  --blue-300: #8fbcd9;   /* lys blå — myke henvelser */
+  --blue-100: #d8e9f4;   /* svært lys blå — bakgrunnsfelt */
   --white: #ffffff;
-  --text: #10314f;
-  --muted: #4d6478;
+  --text: #0f2033;
+  --muted: #46586b;
   --radius: 14px;
   --maxw: 1080px;
 }
@@ -16,7 +17,7 @@
 * { box-sizing: border-box; }
 
 html {
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.65;
@@ -68,14 +69,14 @@ img { max-width: 100%; display: block; }
 .nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
 
 .nav a {
-  color: var(--blue-700);
+  color: #1a1a1a;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
 }
 
-.nav a:hover { color: var(--blue-600); text-decoration: underline; }
-.nav a.active { color: var(--blue-600); font-weight: 700; }
+.nav a:hover { color: var(--blue-700); text-decoration: underline; }
+.nav a.active { color: var(--blue-700); font-weight: 700; }
 
 /* Hero */
 .hero {

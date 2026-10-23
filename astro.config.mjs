@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://www.spire-ipt.no',
+  site: 'https://cathrinewestbye86.github.io',
+  base: '/spire/',
 });

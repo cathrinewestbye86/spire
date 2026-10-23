@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+
+const { title, description } = Astro.props;
+const current = Astro.url.pathname;
+
+const nav = [
+  { href: '/hva-er-inn-pa-tunet', label: 'Hva er Inn på tunet' },
+  { href: '/tjenester', label: 'Tjenester' },
+  { href: '/gardene', label: 'Gårdene' },
+  { href: '/for-kommuner', label: 'For kommuner' },
+  { href: '/om-oss', label: 'Om oss' },
+  { href: '/kontakt', label: 'Kontakt' },
+];
+
+const isActive = (href) => current.startsWith(href);
+---
+
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} – Spire Inn på tunet</title>
+    {description && <meta name="description" content={description} />}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="brand"><span class="sprout">🌱</span> Spire IPT</a>
+        <nav class="nav">
+          {nav.map((item) => (
+            <a href={item.href} class={isActive(item.href) ? 'active' : ''}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Spire IPT</h3>
+          <p>Samvirke av godkjente Inn på tunet-gårder i Innlandet, Vestfold, Buskerud og Østfold.</p>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <ul>
+            <li><a href="mailto:post@spire-innpaatunet.no">post@spire-innpaatunet.no</a></li>
+            <li><a href="tel:+4798816111">+47 988 16 111</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Snarveier</h3>
+          <ul>
+            <li><a href="/gardene">Finn din gård</a></li>
+            <li><a href="/for-kommuner">For kommuner og hjelpeetater</a></li>
+            <li><a href="/kontakt">Kontakt oss</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

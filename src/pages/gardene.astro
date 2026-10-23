@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import { farms } from '../data/content.js';
+
+const regions = [...new Set(farms.map((f) => f.region))];
+---
+
+<Base title="Gårdene" description="Oversikt over Spire IPT sine godkjente medlemsgårder i Innlandet, Vestfold, Buskerud og Østfold.">
+  <div class="page-head">
+    <div class="container">
+      <h1>Våre medlemsgårder</h1>
+      <p>
+        {farms.length} godkjente IPT-gårder i {regions.join(', ')}.
+        Gårdene har ulike ressurser og spesialiteter — vi hjelper deg å finne den som passer best.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      {regions.map((region) => (
+        <>
+          <h2>{region}</h2>
+          {farms.filter((f) => f.region === region).map((f) => (
+            <div class="farm-row">
+              <div>
+                <h3>{f.name}</h3>
+              </div>
+              <a href={f.url} target="_blank" rel="noopener">Gårdens side ↗</a>
+              <span class="desc">{f.description}</span>
+            </div>
+          ))}
+        </>
+      ))}
+    </div>
+  </section>
+</Base>

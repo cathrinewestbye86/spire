@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import { services } from '../../data/content.js';
+
+export function getStaticPaths() {
+  return services.map((s) => ({ params: { slug: s.slug }, props: { service: s } }));
+}
+
+const { service } = Astro.props;
+---
+
+<Base title={service.title} description={service.short}>
+  <div class="page-head">
+    <div class="container">
+      <h1>{service.title}</h1>
+      <p>{service.short}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose">
+      <p>{service.description}</p>
+      <ul>
+        {service.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+      <p>
+        <a href="/gardene">Se hvilke gårder som tilbyr dette →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <p style="margin: 0 0 0.5rem;">Finner du ikke det du leter etter?</p>
+      <h2 style="color: var(--white); margin: 0 0 1rem;">Ta kontakt — vi finner løsningen sammen.</h2>
+      <a href="/kontakt" class="btn">Kontakt oss</a>
+    </div>
+  </section>
+</Base>

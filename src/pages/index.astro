@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import { services, farms } from '../data/content.js';
+---
+
+<Base
+  title="Trygghet og utvikling gjennom grønn omsorg"
+  description="Spire IPT er et samvirke av godkjente Inn på tunet-gårder som tilbyr tilrettelagte tjenester innen læring, arbeid, omsorg og fritid."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Trygghet og utvikling gjennom grønn omsorg</h1>
+      <p>
+        Spire er et samvirke av godkjente Inn på tunet-gårder. Med gården, dyrene og
+        naturen som arena skaper vi mestring, fellesskap og utvikling — i eget tempo.
+      </p>
+      <a href="/gardene" class="btn">Finn din gård</a>
+      <a href="/kontakt" class="btn btn-outline">Ta kontakt</a>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="container">
+      <h2>Hva er grønn omsorg?</h2>
+      <p>
+        Grønn omsorg handler om å bruke gården, naturen og samværet med dyr som ramme
+        for trivsel, utvikling og mestring. Å stelle dyr, så et frø eller løse en
+        praktisk oppgave sammen gir opplevelsen av å være til nytte og høre til.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Våre tjenester</h2>
+      <ul class="cards">
+        {services.map((s) => (
+          <li class="card">
+            <h3>{s.title}</h3>
+            <p>{s.short}</p>
+            <a href={`/tjenester/${s.slug}`} class="more">Les mer →</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <h2>Våre {farms.length} medlemsgårder</h2>
+      {farms.map((f) => (
+        <div class="farm-row">
+          <div>
+            <h3>{f.name}</h3>
+            <span class="region">{f.region}</span>
+          </div>
+          <a href={f.url} target="_blank" rel="noopener">Gårdens side ↗</a>
+          <span class="desc">{f.description}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2 style="color: var(--white); margin: 0 0 0.5rem;">Trenger du et tilbud?</h2>
+      <p style="margin: 0;">Vi hjelper deg med å finne en gård og et tilbud som passer dine behov.</p>
+      <a href="/kontakt" class="btn">Kom i gang</a>
+    </div>
+  </section>
+</Base>

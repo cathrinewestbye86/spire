@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { services } from '../../data/content.js';
+---
+
+<Base title="Tjenester" description="Tilrettelagte tjenester innen læring, arbeid, omsorg og fritid for barn, unge, voksne og eldre.">
+  <div class="page-head">
+    <div class="container">
+      <h1>Våre tjenester</h1>
+      <p>Tilrettelagte tjenester innen læring, arbeid, omsorg og fritid — for mennesker i alle aldre.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <ul class="cards">
+        {services.map((s) => (
+          <li class="card">
+            <h3>{s.title}</h3>
+            <p>{s.short}</p>
+            <a href={`/tjenester/${s.slug}`} class="more">Les mer →</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

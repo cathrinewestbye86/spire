@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import { contactPersons } from '../data/content.js';
+---
+
+<Base title="Kontakt" description="Kontakt Spire IPT — vi hjelper deg med å finne en gård og et tilbud som passer dine behov.">
+  <div class="page-head">
+    <div class="container">
+      <h1>Kontakt oss</h1>
+      <p>Vi hjelper deg med å finne en gård og et tilbud som passer dine behov.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>Styre og administrasjon</h2>
+    </div>
+    <div class="container" style="margin-top: 1rem;">
+      <ul class="contact-list">
+        {contactPersons.map((p) => (
+          <li class="contact-card">
+            <h3>{p.name}</h3>
+            <p class="role">{p.role}</p>
+            <a href={`mailto:${p.email}`}>{p.email}</a>
+            <a href={`tel:${p.phone.replace(/\s/g, '')}`}>{p.phone}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="container prose" style="margin-top: 2rem;">
+      <h2>For pårørende</h2>
+      <p>
+        Er du pårørende og lurer på hvordan du kommer i gang? Les
+        <a href="/hva-er-inn-pa-tunet">slik fungerer Inn på tunet</a>, eller send oss en
+        melding — vi svarer gjerne og uforpliktende.
+      </p>
+    </div>
+  </section>
+</Base>

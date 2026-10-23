@@ -6,6 +6,9 @@
   --green-500: #52b788;   /* frisk vårgrønn — hero-gradient */
   --green-300: #95d5b2;   /* lys grønn — ikoner, myke henvelser */
   --green-100: #d8f3dc;   /* svært lys grønn — bakgrunnsfelt */
+  --blue-900: #0a2e4f;    /* dyp fjordblå — footer (inspirert av IPT) */
+  --blue-700: #1d5b8a;    /* rolig marineblå — CTA-bånd */
+  --blue-300: #a8d4ee;    /* lys blå — myke henvelser i footer */
   --cream: #ffffff;       /* ren hvit — luftige flater */
   --white: #ffffff;
   --text: #1b4332;
@@ -178,8 +181,8 @@ img { max-width: 100%; display: block; }
 
 /* Footer */
 .site-footer {
-  background: var(--green-900);
-  color: var(--green-300);
+  background: var(--blue-900);
+  color: var(--blue-300);
   padding: 2.5rem 0;
   margin-top: 3rem;
 }
@@ -220,13 +223,13 @@ img { max-width: 100%; display: block; }
 
 /* CTA band */
 .cta-band {
-  background: var(--green-700);
+  background: var(--blue-700);
   color: var(--white);
   padding: 2.5rem 0;
   text-align: center;
 }
 
-.cta-band .btn { background: var(--white); color: var(--green-900); margin-top: 1rem; }
+.cta-band .btn { background: var(--white); color: var(--blue-900); margin-top: 1rem; }
 
 /* Evidence cards */
 .evidence-card .source {

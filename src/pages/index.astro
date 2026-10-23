@@ -3,7 +3,13 @@ import Base from '../layouts/Base.astro';
 import { services, farms, news } from '../data/content.js';
 import fs from 'node:fs';
 
-const heroImage = fs.existsSync('public/images/hero.jpg') ? '/images/hero.jpg' : null;
+const heroImage = fs.existsSync('public/images/hero.svg') ? '/images/hero.svg' : fs.existsSync('public/images/hero.jpg') ? '/images/hero.jpg' : null;
+
+const serviceImages = {
+  'barn-og-unge': '/images/barn.svg',
+  'voksne': '/images/voksne.svg',
+  'omsorg': '/images/omsorg.svg',
+};
 ---
 
 <Base
@@ -12,7 +18,7 @@ const heroImage = fs.existsSync('public/images/hero.jpg') ? '/images/hero.jpg' :
 >
   {heroImage ? (
     <section class="hero with-image">
-      <img src={heroImage} alt="Gård i norsk landskap" class="hero-img" />
+      <img src={heroImage} alt="Illustrasjon av gård med sau og rød låve" class="hero-img" />
       <div class="hero-caption">
         <div class="container">
           <h1>Trygghet og utvikling gjennom grønn omsorg</h1>
@@ -58,6 +64,7 @@ const heroImage = fs.existsSync('public/images/hero.jpg') ? '/images/hero.jpg' :
       <ul class="cards">
         {services.map((s) => (
           <li class="card">
+            <img src={serviceImages[s.slug]} alt="" class="card-img" />
             <h3>{s.title}</h3>
             <p>{s.short}</p>
             <a href={`/tjenester/${s.slug}`} class="more">Les mer →</a>

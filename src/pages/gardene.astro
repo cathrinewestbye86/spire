@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import FarmMap from '../components/FarmMap.astro';
 import { farms } from '../data/content.js';
 
 const regions = [...new Set(farms.map((f) => f.region))];
@@ -17,6 +18,13 @@ const regions = [...new Set(farms.map((f) => f.region))];
   </div>
 
   <section class="section">
+    <div class="container">
+      <h2>Kart over medlemsgårdene</h2>
+      <FarmMap />
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--white);">
     <div class="container">
       {regions.map((region) => (
         <>

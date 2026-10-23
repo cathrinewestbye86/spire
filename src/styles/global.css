@@ -279,3 +279,18 @@ img { max-width: 100%; display: block; }
 /* Farm list links */
 .farm-row h3 a { color: var(--blue-900); text-decoration: none; }
 .farm-row h3 a:hover { color: var(--blue-600); text-decoration: underline; }
+
+/* Map */
+.map-wrap { margin-bottom: 1rem; }
+.farm-map {
+  height: 480px;
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--blue-100);
+  z-index: 1;
+}
+.map-hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}

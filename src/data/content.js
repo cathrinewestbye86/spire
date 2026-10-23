@@ -1,6 +1,9 @@
 export const farms = [
   {
     name: 'Fjellgården Finstad',
+    lat: 60.94,
+    lng: 10.02,
+    location: 'Nord-Torpa',
     slug: 'fjellgarden-finstad',
     services: ['Oppfølging for barn og unge', 'Hjelpetiltak og fritidsmiljø'],
     animals: 'Sauer, småfe og stor utmarksbeite',
@@ -10,6 +13,9 @@ export const farms = [
   },
   {
     name: 'Østre Kjærnes Gård',
+    lat: 59.55,
+    lng: 10.7,
+    location: 'Sperrebotn, Våler',
     slug: 'ostre-kaernes-gard',
     services: ['Aktiviteter for barn og unge', 'Rideskole og hestebaserte tilbud'],
     animals: 'Alpakkaer, hest og rideskole',
@@ -19,6 +25,9 @@ export const farms = [
   },
   {
     name: 'Vestgardn Wien',
+    lat: 60.63,
+    lng: 10.5,
+    location: 'Vestgarn',
     slug: 'vestgardn-wien',
     services: ['Arbeidstrening', 'Dagaktivitetstilbud for voksne'],
     animals: 'Kyr og smådyr på tradisjonsrik gård',
@@ -28,6 +37,9 @@ export const farms = [
   },
   {
     name: 'Småbruket Ringeli',
+    lat: 60.83,
+    lng: 10.68,
+    location: 'Snertingdal',
     slug: 'smabruket-ringeli',
     services: ['Oppfølging for barn', 'unge og voksne', 'Trygg og oversiktlig ramme'],
     animals: 'Småskala gårdsdrift med flere dyrearter',
@@ -37,6 +49,9 @@ export const farms = [
   },
   {
     name: 'Buggegården',
+    lat: 59.28,
+    lng: 10.42,
+    location: 'Nykirke',
     slug: 'buggegarden',
     services: ['Individuell oppfølging', 'Aktiviteter i rolig tempo'],
     animals: 'Hest og landbruksaktiviteter',
@@ -46,6 +61,9 @@ export const farms = [
   },
   {
     name: 'Fladmark Gård',
+    lat: 59.59,
+    lng: 11.2,
+    location: 'Askim',
     slug: 'fladmark-gard',
     services: ['Dagtilbud for barn og voksne', 'Samarbeid med skole og barnehage'],
     animals: 'Gårdsbarnehage og IPT-tilbud samme sted',
@@ -55,6 +73,9 @@ export const farms = [
   },
   {
     name: 'Skårød Gård',
+    lat: 59.24,
+    lng: 11.06,
+    location: 'Evenrød, Råde',
     slug: 'skaarod-gard',
     services: ['Sesongbaserte aktiviteter', 'Oppfølging gjennom hele året'],
     animals: 'Sauføll, hønseproduksjon og skog',
@@ -64,6 +85,9 @@ export const farms = [
   },
   {
     name: 'Brautertunet',
+    lat: 59.28,
+    lng: 11.12,
+    location: 'Østfold',
     slug: 'brautertunet',
     services: ['Dagsopphold', 'Kortere opphold'],
     animals: 'Gårdstun med flere dyrearter',
@@ -73,6 +97,9 @@ export const farms = [
   },
   {
     name: 'Bjugstadhøiden Gård',
+    lat: 60.78,
+    lng: 10.63,
+    location: 'Hunndalen',
     slug: 'bjugstadhoiden-gard',
     services: ['Friluftsliv og håndverksaktiviteter', 'Oppfølging i naturnære omgivelser'],
     animals: 'Fjelsgård med stor utmark',
@@ -82,6 +109,9 @@ export const farms = [
   },
   {
     name: 'Søndre Grøset Gård',
+    lat: 60.9,
+    lng: 10.1,
+    location: 'Innlandet',
     slug: 'sondre-groset-gard',
     services: ['Dagtilbud og avlastning', 'Omsorgstilbud'],
     animals: 'Hage, dyr og fellesskap',

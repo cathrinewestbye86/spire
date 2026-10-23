@@ -1,0 +1,62 @@
+---
+import { farms } from '../data/content.js';
+
+const farmMarkers = farms
+  .filter((f) => f.lat && f.lng)
+  .map((f) => ({
+    name: f.name,
+    region: f.region,
+    location: f.location,
+    slug: f.slug,
+    lat: f.lat,
+    lng: f.lng,
+  }));
+---
+
+<div class="map-wrap">
+  <div id="farm-map" class="farm-map" aria-label="Kart over Spire IPT sine medlemsgårder"></div>
+  <p class="map-hint">
+    Klikk på markørene for å se gården — eller zoom og flytt kartet fritt.
+    Kartdata © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.
+  </p>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script is:inline>
+ (async () => {
+    await new Promise((resolve, reject) => {
+      if (window.L) return resolve();
+      const s = document.createElement('script');
+      s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+      s.onload = resolve;
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+
+    const farms = JSON.parse(document.getElementById('farm-data').textContent);
+    const map = L.map('farm-map').setView([60.1, 10.6], 7);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 15,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+
+    const blue = '#1d5b8a';
+    farms.forEach((f) => {
+      const marker = L.circleMarker([f.lat, f.lng], {
+        radius: 10,
+        color: blue,
+        fillColor: blue,
+        fillOpacity: 0.85,
+        weight: 3,
+        color: '#ffffff',
+      }).addTo(map);
+      marker.bindPopup(
+        '<strong>' + f.name + '</strong><br>' +
+        (f.location ? f.location + '<br>' : '') +
+        f.region +
+        '<br><a href="/spire/gardene/' + f.slug + '">Se gårdsprofil →</a>'
+      );
+    });
+  })();
+</script>
+<script type="application/json" id="farm-data" set:html={JSON.stringify(farmMarkers)} />

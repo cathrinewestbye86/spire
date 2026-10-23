@@ -6,6 +6,7 @@ const current = Astro.url.pathname;
 
 const nav = [
   { href: '/hva-er-inn-pa-tunet', label: 'Hva er Inn på tunet' },
+  { href: '/hvorfor-gardsbaserte-tjenester', label: 'Hvorfor gårdsbaserte tjenester' },
   { href: '/tjenester', label: 'Tjenester' },
   { href: '/gardene', label: 'Gårdene' },
   { href: '/for-kommuner', label: 'For kommuner' },
@@ -56,8 +57,9 @@ const isActive = (href) => current.startsWith(href);
         <div>
           <h3>Snarveier</h3>
           <ul>
-            <li><a href="/gardene">Finn din gård</a></li>
+            <li><a href="/gardene">Finn riktig gård</a></li>
             <li><a href="/for-kommuner">For kommuner og hjelpeetater</a></li>
+            <li><a href="/hvorfor-gardsbaserte-tjenester">Forskning på grønn omsorg</a></li>
             <li><a href="/kontakt">Kontakt oss</a></li>
           </ul>
         </div>

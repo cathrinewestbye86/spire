@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+
+const evidence = [
+  {
+    title: 'Mindre angst og økt mestringstro',
+    text: 'En kontrollert norsk intervensjonsstudie (3 måneder med arbeid med storfe og sau) viste mindre angst og økt mestringstro hos personer med psykiske lidelser — målt opp igjen et halvt år etter tiltaket. Gruppen med stemningslidelser økte arbeidsevnen.',
+    source: 'Berget, B. & Braastad, B. O. (2008): Kunnskapsstatus og forskningsbehov for Inn på tunet, Universitetet for miljø- og biovitenskap, på oppdrag fra Norges forskningsråd, NAV og Innovasjon Norge.',
+  },
+  {
+    title: 'Mestring, mening og sosial inkludering for unge',
+    text: 'En norsk studie av 14 ungdommer på seks ulike gårdsbaserte tiltak viste at aktiviteter knyttet til natur og landbruk kan styrke håp, mestring, mening og verdighet — og dermed bidra til sosial inkludering. Ungdommene trakk frem tid til samtale, kontakt med dyr, selvvalgte arbeidsoppgaver og stillheten i naturen.',
+    source: '«En ny start i livet med natur- og gårdsaktiviteter», Tidsskrift for psykisk helsearbeid (2017), Høgskolen i Innlandet.',
+  },
+  {
+    title: 'Dokumenterte effekter på psykisk helse',
+    text: 'Systematiske oversikter over gårdsbaserte intervensjoner for personer med psykiske lidelser viser positive effekter på symptomer, mestring og sosial fungering. Forskerne peker på gårdens kombinasjon av meningsfullt arbeid, dyr, naturrutiner og tett voksenkontakt som unike virkningsmekanismer.',
+    source: 'Pedersen, I. et al. (2012): «Farm-based interventions for people with mental disorders: a systematic review», Disability and Rehabilitation.',
+  },
+  {
+    title: 'Bedre livskvalitet og mindre depresjon',
+    text: 'En systematisk gjennomgang av care farms (gårdsbaserte tjenester) i Europa konkluderer med positive effekter på livskvalitet, helse og sosialt velvære på tvers av brukergrupper — personer med psykiske lidelser, utviklingshemming, rusproblemer, unge utenfor skole og arbeidsliv, og isolerte eldre.',
+    source: 'Murray, J. et al. (2019): «The impact of care farms on quality of life, depression and anxiety», Campbell Systematic Reviews.',
+  },
+  {
+    title: 'Avlastning som utsetter sykehjemsplass',
+    text: 'Norsk kunnskapsoppsummering viser at gode avlastningstilbud kan utsette behovet for sykehjemsplass med 11–15 måneder. Dagtilbud på gård for personer med demens stimulerer til aktivitet, opplevelser og sosialt samvær.',
+    source: 'Berget & Braastad (2008), med henvisning til St.meld. nr. 25 (2005–2006) «Mestring, mulighet og mening».',
+  },
+];
+
+const mechanisms = [
+  { icon: '🐑', title: 'Forutsigbare dyr og rutiner', text: 'Gårdens dagsrytme — mating, stell, høsting — gir struktur og ro. Dyra er forutsigbare og ikke-dømmende relasjoner.' },
+  { icon: '🛠️', title: 'Mestring gjennom praktisk arbeid', text: 'Oppgaver med synkelig resultat gir opplevelse av å være til nytte. Nye ferdigheter bygger tro på egen mestringsevne.' },
+  { icon: '🤝', title: 'Tett voksenkontakt og fellesskap', text: 'Gårdbrukeren er en trygg, tydelig voksen. Gruppeaktivitetene skaper tilhørighet utenfor behandlingsapparatet.' },
+  { icon: '🌲', title: 'Natur med restituerende effekt', text: 'Forskning på natur og psykisk helse (Attention Restoration Theory) støtter at opphold i naturmiljø gjenoppretter konsentrasjon og demper stress.' },
+  { icon: '💪', title: 'Økt fysisk aktivitet', text: 'Gårdsarbeid gir naturlig bevegelse og variert aktivitet i det daglige — uten treningssenterets terskel.' },
+  { icon: '🧭', title: 'Arena for overgang til arbeid', text: 'Arbeidstrening på gård kombinerer sosial- og arbeidstrening i en familiær, forutsigbar ramme — et dokumentert godt springbrett mot ordinært arbeidsliv.' },
+];
+---
+
+<Base
+  title="Hvorfor gårdsbaserte tjenester?"
+  description="Forskning på grønn omsorg og Inn på tunet: dokumenterte effekter på psykisk helse, mestring, arbeidsevne og livskvalitet."
+>
+  <div class="page-head">
+    <div class="container">
+      <h1>Hvorfor gårdsbaserte tjenester?</h1>
+      <p>
+        Grønn omsorg er ikke bare hygge — det er et dokumentert virkemiddel. Her er hva
+        forskningen faktisk viser om gården som arena for helse, læring og mestring.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2>Hva forskningen viser</h2>
+      <ul class="cards">
+        {evidence.map((e) => (
+          <li class="card evidence-card">
+            <h3>{e.title}</h3>
+            <p>{e.text}</p>
+            <p class="source">{e.source}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <h2>Hvorfor fungerer gården?</h2>
+      <ul class="cards">
+        {mechanisms.map((m) => (
+          <li class="card">
+            <h3><span class="icon">{m.icon}</span> {m.title}</h3>
+            <p>{m.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>For kommuner og etater</h2>
+      <p>
+        For oppdragsgivere betyr dette et tiltak som kan settes inn tidlig, i nær sammenheng
+        med brukerens eget lokalmiljø, og som utfyller — ikke erstatter — kommunale tjenester.
+        Med økende press på helse- og omsorgssektoren peker både Helsedirektoratet og
+        forskningsmiljøene på forebyggende, helsefremmende tiltak som en bærekraftig vei
+        videre.
+      </p>
+      <p>
+        Spire gjør dette enkelt å bruke: én kontakt, ti godkjente gårder i fire fylker, og
+        tilbud som kan individualiseres fra dag én.
+        <a href="/for-kommuner">Les hvordan dere bestiller tjenester →</a>
+      </p>
+      <p class="disclaimer">
+        Merk: Feltet har fortsatt behov for mer forskning, blant annet større randomiserte
+        studier. Det vi i dag kan si med sikkerhet, er at brukere og pårørende rapporterer stor
+        nytte, at kvalitative og kontrollerte studier viser positive effekter, og at
+        kunnskapsgrunnlaget er godt nok til at IPT er en etablert del av norsk helse- og
+        velferdstjeneste med egen godkjenningsordning.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2 style="color: var(--white); margin: 0 0 0.5rem;">Vil dere vite mer?</h2>
+      <p style="margin: 0 0 1rem;">Vi formidler gjerne kontakt med gårder som har erfaring med deres type oppdrag.</p>
+      <a href="/kontakt" class="btn">Ta kontakt</a>
+    </div>
+  </section>
+</Base>
